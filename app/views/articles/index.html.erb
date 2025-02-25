@@ -1,0 +1,9 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li >
+      <%= link_to article.title, "/articles/#{article.id}"%>
+      <%= article.content %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Add a new article", "/articles/new" %>
